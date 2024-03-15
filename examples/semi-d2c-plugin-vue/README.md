@@ -96,3 +96,15 @@ D2C 提供了 generateSandboxFiles 钩子，可以将生成的 Vue 组件在 Cod
 ### codePreview
 
 这个钩子输入是产出的代码，可在里面实现完全自定义的转码逻辑。
+
+## 如何创建自己的转码插件？
+
+```bash
+# 社区用户
+mkdir semi-d2c-plugin && cd semi-d2c-plugin
+npm init @douyinfe/semi-d2c-plugin
+
+# 字节内网用户
+mkdir semi-d2c-plugin && cd semi-d2c-plugin
+npm init @ies/semi-d2c-plugin-starter
+```
