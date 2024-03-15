@@ -1,3 +1,14 @@
+# semi-d2c-plugin-vue
+
+一个 Semi D2C 插件，可将设计稿转为 Vue 代码。
+
+支持组件转码，设计稿中包含社区 Vue 组件。
+
+[![Watch the video](https://lf3-static.bytednsdoc.com/obj/eden-cn/ptlz_zlp/ljhwZthlaukjlkulzlp/d2c_doc/d2c-vue-plugin.png)](https://lf3-static.bytednsdoc.com/obj/eden-cn/ptlz_zlp/ljhwZthlaukjlkulzlp/d2c_doc/d2c-vue-plugin.mp4)
+
+- 示例设计稿：https://www.figma.com/community/plugin/1166339852662786534/semi-design
+- 示例 CodeSandbox：https://codesandbox.io/p/devbox/bitter-leftpad-l5j7lj
+
 # 如何支持 Vue？
 
 ## 目标
@@ -97,7 +108,7 @@ D2C 提供了 generateSandboxFiles 钩子，可以将生成的 Vue 组件在 Cod
 
 这个钩子输入是产出的代码，可在里面实现完全自定义的转码逻辑。
 
-## 如何创建自己的转码插件？
+# 如何创建自己的转码插件？
 
 ```bash
 # 社区用户
