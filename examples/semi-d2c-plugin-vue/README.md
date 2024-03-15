@@ -4,7 +4,7 @@
 
 支持组件转码，设计稿中包含社区 Vue 组件。
 
-[![Watch the video](https://lf3-static.bytednsdoc.com/obj/eden-cn/ptlz_zlp/ljhwZthlaukjlkulzlp/d2c_doc/d2c-vue-plugin.png)](https://lf3-static.bytednsdoc.com/obj/eden-cn/ptlz_zlp/ljhwZthlaukjlkulzlp/d2c_doc/d2c-vue-plugin.mp4)
+[![Watch the video](https://lf3-static.bytednsdoc.com/obj/eden-cn/ptlz_zlp/ljhwZthlaukjlkulzlp/d2c_doc/d2c-vue-plugin-tiny.png)](https://lf3-static.bytednsdoc.com/obj/eden-cn/ptlz_zlp/ljhwZthlaukjlkulzlp/d2c_doc/d2c-vue-plugin.mp4)
 
 - 示例设计稿：https://www.figma.com/community/plugin/1166339852662786534/semi-design
 - 示例 CodeSandbox：https://codesandbox.io/p/devbox/bitter-leftpad-l5j7lj
