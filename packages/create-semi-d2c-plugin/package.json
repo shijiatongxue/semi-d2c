@@ -1,0 +1,26 @@
+{
+  "name": "@douyinfe/create-semi-d2c-plugin",
+  "version": "0.0.3",
+  "description": "Create Semi D2C plugin project",
+  "main": "src/index.js",
+  "bin": {
+    "create-semi-d2c-plugin": "./src/index.js"
+  },
+  "keywords": [
+    "semi",
+    "d2c",
+    "plugin"
+  ],
+  "author": "Semi Design",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "cli-color": "^2.0.3",
+    "enquirer": "^2.4.1",
+    "fs-extra": "^11.1.1",
+    "shelljs": "^0.8.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24"
+  }
+}

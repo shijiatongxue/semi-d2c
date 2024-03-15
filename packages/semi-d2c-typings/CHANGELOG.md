@@ -1,0 +1,25 @@
+# @douyinfe/semi-d2c-typings
+
+## 0.0.4
+
+### Patch Changes
+
+- feat: add modifyCSSValue
+
+## 0.0.3
+
+### Patch Changes
+
+- feat: update globalSettings interface
+
+## 0.0.2
+
+### Patch Changes
+
+- feat: add codePreview plugin hook
+
+## 0.0.1
+
+### Patch Changes
+
+- chore: update typescript config

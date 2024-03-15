@@ -1,0 +1,26 @@
+{
+  "name": "@douyinfe/semi-d2c-typings",
+  "version": "0.0.4",
+  "description": "",
+  "main": "",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "keywords": [
+    "semi d2c",
+    "plugin",
+    "typings"
+  ],
+  "author": "Semi Design",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/prettier": "^3.0.0"
+  }
+}

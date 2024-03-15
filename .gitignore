@@ -1,0 +1,9 @@
+# Directories
+node_modules/
+.pnpm/
+
+# Files
+pnpmfile.js
+dist/
+
+.eslintcache
