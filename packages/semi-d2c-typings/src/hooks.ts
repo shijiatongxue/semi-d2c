@@ -21,7 +21,6 @@ export type PluginHooks = {
   modifyEditorDefaultOpenFiles: ModifyEditorDefaultOpenFilesPluginHook;
   codePreview: CodePreviewPluginHook;
   inspectDraft: InspectDraftPluginHook;
-  modifyInspects: ModifyInspectsPluginHook;
 };
 
 export type ModifyJSONSchemaPluginHook = (rootNodeTree: TreeNode) => TreeNode;
@@ -98,6 +97,11 @@ export type ModifyStylePluginHook = (args: {
 export type ModifyCSSVariablePluginHook = (args: {
   variable: string;
   defaultValue: string;
+  codeSyntax: {
+    WEB?: string;
+    ANDROID?: string;
+    iOS?: string;
+  };
 }) => string | { type: 'name' | 'value'; value: string } | undefined;
 
 export type ModifySandboxFilesPluginHook = (args: {

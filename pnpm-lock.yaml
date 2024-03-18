@@ -25,11 +25,47 @@ importers:
       prettier: 3.2.5
       typescript: 4.9.5
 
+  examples/semi-d2c-plugin-css-variable:
+    specifiers:
+      '@babel/core': ^7.22.10
+      '@babel/eslint-parser': ^7.22.10
+      '@douyinfe/semi-d2c-typings': ^0.0.5
+      '@rollup/plugin-commonjs': ^25.0.4
+      '@rollup/plugin-node-resolve': ^15.2.0
+      '@rollup/plugin-terser': ^0.4.3
+      '@rollup/plugin-typescript': ^11.1.6
+      axios: ^1.4.0
+      eslint: ^8.47.0
+      eslint-config-prettier: ^9.0.0
+      eslint-plugin-prettier: ^5.0.0
+      http-server: ^14.1.1
+      prettier: ^3.0.2
+      rollup: ^3.28.0
+      tslib: ^2.6.2
+      typescript: ^3.7.0
+    devDependencies:
+      '@babel/core': 7.24.0
+      '@babel/eslint-parser': 7.23.10_je6jfgrv7viktpzwai2zlbreue
+      '@douyinfe/semi-d2c-typings': link:../../packages/semi-d2c-typings
+      '@rollup/plugin-commonjs': 25.0.7_rollup@3.29.4
+      '@rollup/plugin-node-resolve': 15.2.3_rollup@3.29.4
+      '@rollup/plugin-terser': 0.4.4_rollup@3.29.4
+      '@rollup/plugin-typescript': 11.1.6_kfe5dxgsbn4rwaqu54qszkgin4
+      axios: 1.6.7
+      eslint: 8.57.0
+      eslint-config-prettier: 9.1.0_eslint@8.57.0
+      eslint-plugin-prettier: 5.1.3_udeglvt2rvqfn252kbszwwr7nu
+      http-server: 14.1.1
+      prettier: 3.2.5
+      rollup: 3.29.4
+      tslib: 2.6.2
+      typescript: 3.9.10
+
   examples/semi-d2c-plugin-inspect-component:
     specifiers:
       '@babel/core': ^7.22.10
       '@babel/eslint-parser': ^7.22.10
-      '@douyinfe/semi-d2c-typings': ^0.0.4
+      '@douyinfe/semi-d2c-typings': ^0.0.5
       '@rollup/plugin-commonjs': ^25.0.4
       '@rollup/plugin-node-resolve': ^15.2.0
       '@rollup/plugin-terser': ^0.4.3
@@ -65,7 +101,7 @@ importers:
     specifiers:
       '@babel/core': ^7.22.10
       '@babel/eslint-parser': ^7.22.10
-      '@douyinfe/semi-d2c-typings': ^0.0.4
+      '@douyinfe/semi-d2c-typings': ^0.0.5
       '@rollup/plugin-commonjs': ^25.0.4
       '@rollup/plugin-node-resolve': ^15.2.0
       '@rollup/plugin-terser': ^0.4.3
@@ -125,7 +161,7 @@ importers:
     specifiers:
       '@babel/core': ^7.22.10
       '@babel/eslint-parser': ^7.22.10
-      '@douyinfe/semi-d2c-typings': ^0.0.4
+      '@douyinfe/semi-d2c-typings': ^0.0.5
       '@rollup/plugin-commonjs': ^25.0.4
       '@rollup/plugin-node-resolve': ^15.2.0
       '@rollup/plugin-terser': ^0.4.3
