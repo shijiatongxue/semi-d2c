@@ -1,4 +1,10 @@
-import { GlobalSetting, ImportsType, SandboxParams, TreeNode } from './core';
+import {
+  D2CInspect,
+  GlobalSetting,
+  ImportsType,
+  SandboxParams,
+  TreeNode,
+} from './core';
 
 export type PluginHooks = {
   modifyJSONSchema: ModifyJSONSchemaPluginHook;
@@ -6,7 +12,6 @@ export type PluginHooks = {
   modifyStyle: ModifyStylePluginHook;
   generateCSS: GenerateCSSPluginHook;
   modifyCSS: ModifyCSSPluginHook;
-  modifyCSSValue: ModifyCSSValuePluginHook;
   modifyCSSVariable: ModifyCSSVariablePluginHook;
   generateTemplate: GenerateTemplatePluginHook;
   generateTemplateFile: GenerateTemplateFilePluginHook;
@@ -15,6 +20,8 @@ export type PluginHooks = {
   modifyEditorDefaultActiveFile: ModifyEditorDefaultActiveFilePluginHook;
   modifyEditorDefaultOpenFiles: ModifyEditorDefaultOpenFilesPluginHook;
   codePreview: CodePreviewPluginHook;
+  inspectDraft: InspectDraftPluginHook;
+  modifyInspects: ModifyInspectsPluginHook;
 };
 
 export type ModifyJSONSchemaPluginHook = (rootNodeTree: TreeNode) => TreeNode;
@@ -115,7 +122,6 @@ export type CodePreviewPluginHook = (options: {
   globalSettings: GlobalSetting;
 }) => void;
 
-export type ModifyCSSValuePluginHook = (options: {
-  key: string;
-  value: string;
-}) => void;
+export type InspectDraftPluginHook = (treeNode: TreeNode) => D2CInspect[];
+
+export type ModifyInspectsPluginHook = (inspects: D2CInspect[]) => D2CInspect[];

@@ -1,5 +1,11 @@
 # @douyinfe/semi-d2c-typings
 
+## 0.0.5
+
+### Patch Changes
+
+- feat: add inspectDraft and modifyInspects hooks, update ts config file
+
 ## 0.0.4
 
 ### Patch Changes
