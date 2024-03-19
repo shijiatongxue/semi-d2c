@@ -13,7 +13,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "lint-staged": {
     "*": "prettier --cache --write --ignore-unknown",
     "packages/*/{src,types}/**/*.{ts,tsx}": [

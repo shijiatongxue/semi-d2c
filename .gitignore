@@ -7,4 +7,4 @@ pnpmfile.js
 dist/
 
 .eslintcache
-DS_Store
+.DS_Store
