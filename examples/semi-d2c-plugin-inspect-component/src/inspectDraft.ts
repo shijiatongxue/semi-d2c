@@ -39,6 +39,7 @@ const inspectDraft = (
       inspectTitle: tag,
       inspectMessage: '可被转码为组件',
       nodeIds: nodes.map((item) => item.id).filter(Boolean),
+      tagName: tag,
     };
     inspects.push(componentInspect);
   }
@@ -50,6 +51,7 @@ const inspectDraft = (
       inspectTitle: name,
       inspectMessage: '无法被转码为组件',
       nodeIds: nodes.map((item) => item.id).filter(Boolean),
+      tagName: '无法转码为组件',
     };
     inspects.push(notComponentInspect);
   }
