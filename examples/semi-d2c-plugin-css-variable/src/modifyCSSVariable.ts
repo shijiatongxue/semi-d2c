@@ -1,14 +1,18 @@
 import { PluginHooks } from '@douyinfe/semi-d2c-typings';
 
-const modifyCSSVariable: PluginHooks['modifyCSSVariable'] = (args) => {
+const modifyCSSVariable = (
+  args: Parameters<PluginHooks['modifyCSSVariable']>[0],
+  options: Record<string, any>
+) => {
   const { variable, codeSyntax } = args;
-  // 如果在 Figma 中已定义 codeSyntax，则直接返回，这里返回的是 WEB
-  // 或根据转码插件所属的框架选择 codeSyntax，比如转码插件框架是 iOS，这里则选择 codeSyntax['iOS']
-  if (codeSyntax?.WEB) {
+  const { platform } = options;
+
+  // 如果在 Figma 中已定义 codeSyntax，则返回对应平台的 css variable
+  if (platform in codeSyntax) {
     // 可以返回一个对象，完全控制生成的 css value，
     return {
       type: 'value',
-      value: codeSyntax.WEB,
+      value: codeSyntax[platform],
     };
   } else {
     const variableMap = {
