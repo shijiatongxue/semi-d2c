@@ -1,5 +1,11 @@
 # @douyinfe/semi-d2c-typings
 
+## 0.0.6
+
+### Patch Changes
+
+- feat: add codeSyntax to modifyCSSVariable hook
+
 ## 0.0.5
 
 ### Patch Changes
