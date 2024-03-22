@@ -2,7 +2,8 @@
 
 一个 Semi D2C 插件，可检查设计稿中可被转码为组件节点、提醒无法被转码为组件的节点。
 
-[![Watch the video](https://lf3-static.bytednsdoc.com/obj/eden-cn/ptlz_zlp/ljhwZthlaukjlkulzlp/d2c_doc/inspect-component-封面.jpg)](https://lf3-static.bytednsdoc.com/obj/eden-cn/ptlz_zlp/ljhwZthlaukjlkulzlp/d2c_doc/inspect-component.mp4)
+[![Watch the video](https://github.com/shijiatongxue/semi-d2c/assets/26477537/0efb8321-9590-4c88-b23c-b67782318b1d)](https://lf3-static.bytednsdoc.com/obj/eden-cn/ptlz_zlp/ljhwZthlaukjlkulzlp/d2c_doc/inspect-component.mp4)
+
 
 ## 实现
 
