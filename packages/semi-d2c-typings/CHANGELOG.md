@@ -1,5 +1,11 @@
 # @douyinfe/semi-d2c-typings
 
+## 0.0.7
+
+### Patch Changes
+
+- feat: add TreeNode style type
+
 ## 0.0.6
 
 ### Patch Changes
