@@ -86,8 +86,8 @@ interface BoxStyle {
   borderBottomColor?: string;
   borderStyle?: 'solid' | 'dashed';
   outlineWidth?: number;
-  outlineColor?: number;
-  outlineStyle?: number;
+  outlineColor?: string;
+  outlineStyle?: 'solid' | 'dashed';
   borderTopLeftRadius?: number | string;
   borderTopRightRadius?: number | string;
   borderBottomLeftRadius?: number | string;
