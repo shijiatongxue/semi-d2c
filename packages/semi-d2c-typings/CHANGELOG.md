@@ -1,5 +1,11 @@
 # @douyinfe/semi-d2c-typings
 
+## 0.0.8
+
+### Patch Changes
+
+- fix: fixed outline style type
+
 ## 0.0.7
 
 ### Patch Changes

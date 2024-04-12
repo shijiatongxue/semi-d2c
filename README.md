@@ -31,7 +31,7 @@ pnpm add A --filter B
 
 ## Publish
 
+- `pnpm changeset`
 - `pnpm changeset version`
-- `pnpm install`
 - commit
 - `pnpm publish -r`
