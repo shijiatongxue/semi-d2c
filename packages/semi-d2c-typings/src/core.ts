@@ -9,7 +9,7 @@ export interface TreeNode {
   /** 组件是否是默认导出  */
   defaultModule?: boolean;
   /** 对应转译后的 css 样式。key-value 对应 css 属性/值 */
-  style: Record<string, any>;
+  style: TreeNodeStyle;
   /** 对应转译后的 HTML 属性（未来会有组件 props），比如 img 标签的 src 属性  */
   props?: Record<string, any>;
   /** 在 figma 画布上的子节点 */
@@ -30,6 +30,129 @@ export interface TreeNode {
   toTemplate?: ToTemplate;
   /** 是否是 d2c node  */
   __semi_d2c_node__?: boolean;
+}
+
+/**
+ * style 内包含 Schema 的样式，包含的内容基于 Web CSS，key 的格式基于驼峰
+ *
+ * 注意：
+ * - 属性省略时，根据 Web 规则对应属性的值，比如 display：如果 tag 是 div 是 block，span 是 inline-block
+ * - 部分属性的格式是大写开头，这个是历史原因，沿用了 React 的语法
+ *    - WebkitLineClamp
+ *    - WebkitBoxOrient
+ */
+export interface TreeNodeStyle
+  extends LayoutStyle,
+    BoxStyle,
+    TextStyle,
+    FlexStyle,
+    VisibilityStyle,
+    TransformStyle,
+    ShadowStyle,
+    FilterStyle {}
+
+interface LayoutStyle {
+  display?: 'flex' | 'inline-flex' | '-webkit-box';
+  position?: 'relative' | 'absolute';
+  top?: number;
+  right?: number;
+  bottom?: number;
+  left?: number;
+}
+
+interface BoxStyle {
+  boxSizing?: 'content-box' | 'border-box';
+  width?: number;
+  height?: number;
+  minWidth?: number;
+  minHeight?: number;
+  maxHeight?: number;
+  maxWidth?: number;
+  paddingTop?: number;
+  paddingRight?: number;
+  paddingBottom?: number;
+  paddingLeft?: number;
+  marginTop?: number;
+  marginRight?: number;
+  marginBottom?: number;
+  marginLeft?: number;
+  borderTopWidth?: number;
+  borderRightWidth?: number;
+  borderLeftWidth?: number;
+  borderBottomWidth?: number;
+  borderLeftColor?: string;
+  borderRightColor?: string;
+  borderTopColor?: string;
+  borderBottomColor?: string;
+  borderStyle?: 'solid' | 'dashed';
+  outlineWidth?: number;
+  outlineColor?: number;
+  outlineStyle?: number;
+  borderTopLeftRadius?: number | string;
+  borderTopRightRadius?: number | string;
+  borderBottomLeftRadius?: number | string;
+  borderBottomRightRadius?: number | string;
+  background?: string;
+  overflow?: 'hidden';
+}
+
+interface TextStyle {
+  fontSize?: number;
+  fontFamily?: string;
+  fontWeight?: number;
+  lineHeight?: number;
+  textOverflow?: 'ellipsis';
+  letterSpacing?: number;
+  whiteSpace?: 'nowrap';
+  textAlign?: 'top' | 'middle' | 'bottom';
+  textTransform?: 'UPPERCASE' | 'LOWERCASE';
+  textDecoration?: 'line-through' | 'underline';
+  color?: string;
+  WebkitLineClamp?: number;
+  WebkitBoxOrient?: 'vertical';
+}
+
+interface FlexStyle {
+  flexGrow?: number;
+  flexShrink?: number;
+  flexBasis?: number;
+  flexDirection?: 'row' | 'column';
+  flexWrap?: 'nowrap' | 'wrap';
+  justifyContent?: 'flex-start' | 'flex-end' | 'center' | 'space-between';
+  alignItems?: 'flex-start' | 'flex-end' | 'center' | 'baseline';
+  alignSelf?:
+    | 'auto'
+    | 'flex-start'
+    | 'flex-end'
+    | 'center'
+    | 'baseline'
+    | 'stretch';
+  alignContent?:
+    | 'flex-start'
+    | 'flex-end'
+    | 'center'
+    | 'space-between'
+    | 'stretch';
+  columnGap?: number;
+  rowGap?: number;
+}
+
+interface VisibilityStyle {
+  opacity?: number;
+  zIndex?: number;
+}
+
+interface TransformStyle {
+  transform?: string;
+}
+
+interface ShadowStyle {
+  boxShadow?: string;
+}
+
+interface FilterStyle {
+  backdropFilter?: string;
+  filter?: string;
 }
 
 export interface Dependency {
