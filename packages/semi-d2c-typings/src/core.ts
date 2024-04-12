@@ -88,9 +88,13 @@ interface BoxStyle {
   outlineWidth?: number;
   outlineColor?: string;
   outlineStyle?: 'solid' | 'dashed';
+  /** string 时，值为百分比，例如 `50%`  */
   borderTopLeftRadius?: number | string;
+  /** string 时，值为百分比，例如 `50%`  */
   borderTopRightRadius?: number | string;
+  /** string 时，值为百分比，例如 `50%`  */
   borderBottomLeftRadius?: number | string;
+  /** string 时，值为百分比，例如 `50%`  */
   borderBottomRightRadius?: number | string;
   background?: string;
   overflow?: 'hidden';
