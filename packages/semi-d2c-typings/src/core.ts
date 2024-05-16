@@ -97,6 +97,8 @@ interface BoxStyle {
   /** string 时，值为百分比，例如 `50%`  */
   borderBottomRightRadius?: number | string;
   background?: string;
+  backgroundClip?: 'text';
+  WebkitBackgroundClip?: 'text';
   overflow?: 'hidden';
 }
 
@@ -107,7 +109,7 @@ interface TextStyle {
   lineHeight?: number;
   textOverflow?: 'ellipsis';
   letterSpacing?: number;
-  whiteSpace?: 'nowrap';
+  whiteSpace?: 'normal' | 'nowrap';
   textAlign?: 'top' | 'middle' | 'bottom';
   textTransform?: 'UPPERCASE' | 'LOWERCASE';
   textDecoration?: 'line-through' | 'underline';
