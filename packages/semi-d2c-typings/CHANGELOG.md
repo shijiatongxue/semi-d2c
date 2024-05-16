@@ -1,5 +1,11 @@
 # @douyinfe/semi-d2c-typings
 
+## 0.0.9
+
+### Patch Changes
+
+- feat: update backgroundClip and whiteSpace typings
+
 ## 0.0.8
 
 ### Patch Changes
