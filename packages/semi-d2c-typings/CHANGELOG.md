@@ -1,5 +1,11 @@
 # @douyinfe/semi-d2c-typings
 
+## 0.0.10
+
+### Patch Changes
+
+- feat: typings add fontStyle to TreeNodeStyle
+
 ## 0.0.9
 
 ### Patch Changes
