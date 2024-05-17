@@ -106,6 +106,7 @@ interface TextStyle {
   fontSize?: number;
   fontFamily?: string;
   fontWeight?: number;
+  fontStyle?: 'normal' | 'italic';
   lineHeight?: number;
   textOverflow?: 'ellipsis';
   letterSpacing?: number;
