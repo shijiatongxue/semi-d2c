@@ -1,5 +1,11 @@
 # @douyinfe/semi-d2c-typings
 
+## 0.0.11
+
+### Patch Changes
+
+- feat: update Dependency typings
+
 ## 0.0.10
 
 ### Patch Changes

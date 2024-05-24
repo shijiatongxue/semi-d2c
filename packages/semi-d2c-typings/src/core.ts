@@ -165,7 +165,7 @@ interface FilterStyle {
 export interface Dependency {
   componentName: string;
   packageName: string;
-  defaultModule: boolean; // 是否是默认导入，默认是 false
+  defaultModule?: boolean; // 是否是默认导入，默认是 false
 }
 
 export type ToTemplate = (
