@@ -1,5 +1,11 @@
 # @douyinfe/semi-d2c-typings
 
+## 0.0.13
+
+### Patch Changes
+
+- docs: update background comment
+
 ## 0.0.12
 
 ### Patch Changes
