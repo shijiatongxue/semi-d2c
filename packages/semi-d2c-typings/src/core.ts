@@ -96,11 +96,46 @@ interface BoxStyle {
   borderBottomLeftRadius?: number | string;
   /** string 时，值为百分比，例如 `50%`  */
   borderBottomRightRadius?: number | string;
+  /**
+   * 若只有 backgroundColor 会使用这个
+   */
   background?: string;
+  /**
+   * 若有背景图或渐变色
+   */
   backgroundImage?: string;
+  /**
+   * 同时存在背景图和背景色，背景色使用 backgroundColor
+   */
   backgroundColor?: string;
+  /**
+   * 背景图位置
+   * @example
+   * ```js
+   * backgroundPosition = 'center';
+   * backgroundPosition = 'left top';
+   * backgroundPosition = '10px 10px';
+   * ```
+   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-position
+   */
   backgroundPosition?: string;
+  /**
+   * 背景图大小
+   * @example
+   * ```js
+   * backgroundSize = 'contain';
+   * backgroundSize = '100% 120%';
+   * backgroundSize = '400px 300px';
+   * // 两张图片会用这个
+   * backgroundSize = '90.35% 100.00%, 100.00% 99.89%';
+   * ```
+   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-size
+   */
   backgroundSize?: string;
+  /**
+   * 背景图重复模式
+   * @see https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat
+   */
   backgroundRepeat?: 'repeat' | 'no-repeat';
   backgroundClip?: 'text';
   WebkitBackgroundClip?: 'text';
