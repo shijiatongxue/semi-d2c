@@ -1,5 +1,11 @@
 # @douyinfe/semi-d2c-typings
 
+## 0.0.12
+
+### Patch Changes
+
+- feat: add backgroundImage, backgroundColor, backgroumdPosition, backgroundSize, backgroundRepeat
+
 ## 0.0.11
 
 ### Patch Changes

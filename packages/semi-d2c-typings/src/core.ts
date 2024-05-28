@@ -97,6 +97,11 @@ interface BoxStyle {
   /** string 时，值为百分比，例如 `50%`  */
   borderBottomRightRadius?: number | string;
   background?: string;
+  backgroundImage?: string;
+  backgroundColor?: string;
+  backgroundPosition?: string;
+  backgroundSize?: string;
+  backgroundRepeat?: 'repeat' | 'no-repeat';
   backgroundClip?: 'text';
   WebkitBackgroundClip?: 'text';
   overflow?: 'hidden';
