@@ -21,6 +21,7 @@ export type PluginHooks = {
   modifyEditorDefaultOpenFiles: ModifyEditorDefaultOpenFilesPluginHook;
   codePreview: CodePreviewPluginHook;
   inspectDraft: InspectDraftPluginHook;
+  getSharedPluginData: GetSharedPluginDataPluginHook;
 };
 
 export type ModifyJSONSchemaPluginHook = (rootNodeTree: TreeNode) => TreeNode;
@@ -129,3 +130,13 @@ export type CodePreviewPluginHook = (options: {
 export type InspectDraftPluginHook = (treeNode: TreeNode) => D2CInspect[];
 
 export type ModifyInspectsPluginHook = (inspects: D2CInspect[]) => D2CInspect[];
+
+export type GetSharedPluginDataPluginHook = (args: {
+  node: {
+    /**
+     * 实际调用的是 Figma 方法
+     * @see https://www.figma.com/plugin-docs/api/PaintStyle/#getsharedplugindata
+     */
+    getSharedPluginData: (namespace: string, key: string) => string;
+  };
+}) => Record<string, any>;
