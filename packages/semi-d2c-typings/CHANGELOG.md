@@ -1,5 +1,11 @@
 # @douyinfe/semi-d2c-typings
 
+## 0.0.15
+
+### Patch Changes
+
+- feat: add modifyInheritableCSSProps plugin hook
+
 ## 0.0.14
 
 ### Patch Changes

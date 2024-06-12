@@ -2,14 +2,20 @@ import { TreeNode } from './core';
 import type { Options as PrettierOptions } from 'prettier';
 import { PluginHooks } from './hooks';
 
+/**
+ * 代码定制化插件
+ * @see https://bytedance.larkoffice.com/wiki/ViuZwjP9giLLR2kxwMzc8GZMnof
+ */
 export type SemiD2CPlugin = () => SemiD2CPluginReturnType;
 
 export type SemiD2CPluginReturnType = {
   name: string;
   setup(
+    /** @see https://bytedance.larkoffice.com/wiki/ViuZwjP9giLLR2kxwMzc8GZMnof#O10bdVxrUon2SxxsiEuctE46nie */
     api: PluginAPI,
     pluginOptions: Record<string, PluginOption['value']>
   ): void;
+  /** @see https://bytedance.larkoffice.com/wiki/ViuZwjP9giLLR2kxwMzc8GZMnof#UJ3VdrLXNouSBOxVlzDcSdFUnCy */
   options?: PluginOption[];
 };
 
