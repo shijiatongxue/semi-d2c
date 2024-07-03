@@ -33,7 +33,11 @@ const modifyProps: PluginHooks['modifyProps'] = (args) => {
         if (Array.isArray(props.children)) {
           props.children.unshift(value);
         } else {
-          props.children = [value];
+          if (isNode(props.children)) {
+            props.children = [props.children, value];
+          } else {
+            props.children = [value];
+          }
         }
         shouldEmitProps.push(key);
         break;
