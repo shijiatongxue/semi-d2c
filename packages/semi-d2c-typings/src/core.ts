@@ -147,7 +147,8 @@ interface TextStyle {
   fontFamily?: string;
   fontWeight?: number;
   fontStyle?: 'normal' | 'italic';
-  lineHeight?: number;
+  /** 无法计算出来准确的 lineHeight 时，会设置为 normal  */
+  lineHeight?: number | 'normal';
   textOverflow?: 'ellipsis';
   letterSpacing?: number;
   whiteSpace?: 'normal' | 'nowrap';

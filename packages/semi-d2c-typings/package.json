@@ -10,8 +10,10 @@
     "prepublishOnly": "npm run build"
   },
   "files": [
+    "src",
     "dist",
-    "package.json"
+    "package.json",
+    "CHANGELOG.md"
   ],
   "keywords": [
     "semi d2c",
@@ -19,6 +21,9 @@
     "typings"
   ],
   "author": "Semi Design",
+  "repository": {
+    "url": "https://github.com/shijiatongxue/semi-d2c/tree/main/packages/semi-d2c-typings"
+  },
   "license": "MIT",
   "devDependencies": {
     "@types/prettier": "^3.0.0"
