@@ -1,5 +1,11 @@
 # @douyinfe/semi-d2c-typings
 
+## 0.0.16
+
+### Patch Changes
+
+- feat: add 'normal' type to lineHeight
+
 ## 0.0.15
 
 ### Patch Changes
