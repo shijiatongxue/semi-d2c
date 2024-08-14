@@ -87,6 +87,10 @@ export type PluginHooks = {
    * @see https://bytedance.larkoffice.com/wiki/ViuZwjP9giLLR2kxwMzc8GZMnof#XPkidL81RomSKrxb0doco1sMnR2
    */
   modifyInheritableCSSProps: ModifyInheritableCSSPropsPluginHook;
+  /**
+   * 在转码阶段决定节点是否是图片
+   */
+  isImageNode: IsImageNodePluginHook;
 };
 
 export type ModifyJSONSchemaPluginHook = (rootNodeTree: TreeNode) => TreeNode;
@@ -210,3 +214,13 @@ export type ModifyInheritableCSSPropsPluginHook = (args: {
   inheritableCSSProps: string[];
   node: TreeNode;
 }) => string[];
+
+/**
+ * 返回值
+ * - 为 true 时，表示自动决定图片格式
+ * - 为 PNG 时，表示转为 PNG 图片
+ * - 为 SVG 时，表示转为 SVG 矢量图
+ */
+export type IsImageNodePluginHook = (args: {
+  node: TreeNode;
+}) => boolean | { format: 'PNG' | 'SVG' };

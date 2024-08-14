@@ -1,5 +1,11 @@
 # @douyinfe/semi-d2c-typings
 
+## 0.0.17
+
+### Patch Changes
+
+- typings: add isImageNode hook
+
 ## 0.0.16
 
 ### Patch Changes
