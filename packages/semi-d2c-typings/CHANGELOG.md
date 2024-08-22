@@ -1,5 +1,11 @@
 # @douyinfe/semi-d2c-typings
 
+## 0.0.18
+
+### Patch Changes
+
+- typings: update plugin option type
+
 ## 0.0.17
 
 ### Patch Changes

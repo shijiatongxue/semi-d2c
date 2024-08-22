@@ -13,7 +13,7 @@ export type SemiD2CPluginReturnType = {
   setup(
     /** @see https://bytedance.larkoffice.com/wiki/ViuZwjP9giLLR2kxwMzc8GZMnof#O10bdVxrUon2SxxsiEuctE46nie */
     api: PluginAPI,
-    pluginOptions: Record<string, PluginOption['value']>
+    pluginOptions: Record<string, string | boolean>
   ): void;
   /** @see https://bytedance.larkoffice.com/wiki/ViuZwjP9giLLR2kxwMzc8GZMnof#UJ3VdrLXNouSBOxVlzDcSdFUnCy */
   options?: PluginOption[];
@@ -30,12 +30,25 @@ export type PluginAPI = {
   };
 };
 
-export interface PluginOption {
+export type PluginOption = OptionSwitch | OptionSelect | OptionInput;
+
+export interface OptionSelect {
   name: string;
-  type: 'switch' | 'select';
-  defaultValue?: boolean | string;
-  value?: boolean | string;
+  type: 'select';
+  defaultValue?: string;
   optionList?: string[];
+}
+
+export interface OptionSwitch {
+  name: string;
+  type: 'switch';
+  defaultValue?: boolean;
+}
+
+export interface OptionInput {
+  name: string;
+  type: 'input';
+  defaultValue?: string;
 }
 
 export interface APIUtils {
