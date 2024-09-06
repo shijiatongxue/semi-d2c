@@ -1,5 +1,11 @@
 # @douyinfe/semi-d2c-typings
 
+## 0.0.19
+
+### Patch Changes
+
+- typings: update textAlign type
+
 ## 0.0.18
 
 ### Patch Changes
