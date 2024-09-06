@@ -152,7 +152,8 @@ interface TextStyle {
   textOverflow?: 'ellipsis';
   letterSpacing?: number;
   whiteSpace?: 'normal' | 'nowrap';
-  textAlign?: 'top' | 'middle' | 'bottom';
+  verticalAlign?: 'top' | 'middle' | 'bottom';
+  textAlign?: 'left' | 'right' | 'center' | 'justify';
   textTransform?: 'UPPERCASE' | 'LOWERCASE';
   textDecoration?: 'line-through' | 'underline';
   color?: string;
