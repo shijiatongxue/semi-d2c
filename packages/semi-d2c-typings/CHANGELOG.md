@@ -1,5 +1,11 @@
 # @douyinfe/semi-d2c-typings
 
+## 0.0.20
+
+### Patch Changes
+
+- feat: add beforeCopyJSONResult hook
+
 ## 0.0.19
 
 ### Patch Changes
