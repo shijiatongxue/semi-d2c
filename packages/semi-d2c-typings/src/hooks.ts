@@ -91,6 +91,10 @@ export type PluginHooks = {
    * 在转码阶段决定节点是否是图片
    */
   isImageNode: IsImageNodePluginHook;
+  /**
+   * 修改复制 JSON 按钮的结果
+   */
+  beforeCopyJSONResult: BeforeCopyJSONResultHook;
 };
 
 export type ModifyJSONSchemaPluginHook = (rootNodeTree: TreeNode) => TreeNode;
@@ -224,3 +228,7 @@ export type ModifyInheritableCSSPropsPluginHook = (args: {
 export type IsImageNodePluginHook = (args: {
   node: TreeNode;
 }) => boolean | { format: 'PNG' | 'SVG' };
+
+export type BeforeCopyJSONResultHook = (args: {
+  JSONSchema: TreeNode;
+}) => TreeNode | string;
