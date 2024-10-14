@@ -1,5 +1,11 @@
 # @douyinfe/semi-d2c-typings
 
+## 0.0.21
+
+### Patch Changes
+
+- feat: update plugin api.utils typings
+
 ## 0.0.20
 
 ### Patch Changes
