@@ -1,56 +1,45 @@
 import { TreeNode, PluginHooks, PluginAPI } from '@douyinfe/semi-d2c-typings';
 import { kebabCase, upperFirst } from 'lodash';
-import { hooks } from './utils';
 
 const generateCSS = (
   args: Parameters<PluginHooks['generateCSS']>[0],
   utils: PluginAPI['utils']
 ) => {
-  const { JSONSchema } = args;
-  const { traverseNodeTree } = utils;
+  const { JSONSchema, sizeUnitConfig } = args;
+  const {
+    traverseNodeTree,
+    getNodeClassName,
+    transformStyleToCSSDeclarationBlock,
+  } = utils;
   let cssStr = '';
 
-  const classNameSet = new Set();
+  const classNameSet: Set<string> = new Set();
   traverseNodeTree(JSONSchema, (node: TreeNode) => {
-    let { className } = node;
     const { style } = node;
-
-    if (className && style) {
-      if (classNameSet.has(className)) {
-        for (let i = 1; ; i++) {
-          const newClassName = `${className}${i}`;
-          if (!classNameSet.has(newClassName)) {
-            className = newClassName;
-            break;
-          }
-        }
-      }
-      classNameSet.add(className);
-      className = kebabCase(className);
-      node.className = className;
-      const classKey = `.${className}`;
-      const newStyle = initStyle(style);
-      const classValue = Object.keys(newStyle)
-        .map((key) => {
-          const value = newStyle[key];
-          return `${getCSSAttrKey(key)}: ${value}`;
-        })
-        .join(';');
-
-      cssStr += `${classKey} { ${classValue} };\n`;
+    if (!style) {
+      return;
     }
+
+    const className = getNodeClassName(node, {
+      classNameSet,
+      caseStyle: 'kebabCase',
+    });
+    node.className = className;
+    const declBlock = transformStyleToCSSDeclarationBlock(style, {
+      sizeUnitConfig,
+      modifyCSSDeclaration: (key: string, value: string) => {
+        const newKey = getCSSAttrKey(key);
+        return {
+          key: newKey,
+          value,
+        };
+      },
+    });
+    cssStr += `.${className} ${declBlock}`;
   });
 
   return cssStr;
 };
-
-function initStyle(style) {
-  hooks.forEach((hook) => {
-    hook(style);
-  });
-
-  return style;
-}
 
 function getCSSAttrKey(reactStylePropKey) {
   const isFirstCharUppercase =
