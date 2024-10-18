@@ -1,6 +1,6 @@
 import { TreeNode } from './core';
 import type { Options as PrettierOptions } from 'prettier';
-import { PluginHooks } from './hooks';
+import { PluginHooks, SizeUnitConfigType } from './hooks';
 
 /**
  * 代码定制化插件
@@ -120,7 +120,7 @@ export interface APIUtils {
    */
   transformStyleToCSSDeclarationBlock: (
     style: TreeNode['style'],
-    options?: TransformStyleToCSSDeclarationObjectOptions
+    options?: TransformStyleToCSSDeclarationBlockOptions
   ) => Record<string, any>;
   transformStyleToTailwind: (
     style?: TreeNode['style'],
@@ -157,6 +157,16 @@ export interface TransformStyleToCSSDeclarationObjectOptions {
    * 允许传入自定义函数，修改返回的 key 和 value 的格式
    */
   modifyCSSDeclaration?: ModifyCSSDeclaration;
+}
+
+export interface TransformStyleToCSSDeclarationBlockOptions
+  extends TransformStyleToCSSDeclarationObjectOptions {
+  /** 移除 block 开头的 '{' 和 结尾的 '}'  */
+  removeBraces?: boolean;
+  /** declaration 的分隔符，默认为 '\n'  */
+  lineSeparator?: string;
+  /** 像素单位 */
+  sizeUnitConfig?: SizeUnitConfigType;
 }
 
 export type ModifyCSSDeclaration = (

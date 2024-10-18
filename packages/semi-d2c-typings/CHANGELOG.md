@@ -1,5 +1,11 @@
 # @douyinfe/semi-d2c-typings
 
+## 0.0.22
+
+### Patch Changes
+
+- typings: update generateCSS and modifyCSS typings
+
 ## 0.0.21
 
 ### Patch Changes

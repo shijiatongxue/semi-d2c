@@ -104,6 +104,7 @@ export type GenerateCSSPluginHook = (args: {
   enableTailwind: boolean;
   enableInlineCSS: boolean;
   enableEmotion: boolean;
+  sizeUnitConfig: SizeUnitConfigType;
 }) => string;
 
 export type ModifyCSSPluginHook = (args: {
@@ -112,6 +113,7 @@ export type ModifyCSSPluginHook = (args: {
   enableTailwind: boolean;
   enableInlineCSS: boolean;
   enableEmotion: boolean;
+  sizeUnitConfig: SizeUnitConfigType;
 }) => string;
 
 export type GenerateTemplatePluginHook = (args: {
@@ -232,3 +234,12 @@ export type IsImageNodePluginHook = (args: {
 export type BeforeCopyJSONResultHook = (args: {
   JSONSchema: TreeNode;
 }) => TreeNode | string;
+
+export interface SizeUnitConfigType {
+  sizeUnit: 'px' | 'rem';
+  remConfig: {
+    rootFontSize: number;
+    remAttributes: string[];
+    remEffectiveFlag: 'default' | 'white' | 'black';
+  };
+}
