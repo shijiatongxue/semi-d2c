@@ -1,5 +1,11 @@
 # @douyinfe/semi-d2c-typings
 
+## 0.0.23
+
+### Patch Changes
+
+- typings: style add overflowX and overflowY
+
 ## 0.0.22
 
 ### Patch Changes

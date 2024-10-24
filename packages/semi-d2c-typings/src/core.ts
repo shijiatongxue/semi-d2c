@@ -139,7 +139,9 @@ interface BoxStyle {
   backgroundRepeat?: 'repeat' | 'no-repeat';
   backgroundClip?: 'text';
   WebkitBackgroundClip?: 'text';
-  overflow?: 'hidden';
+  overflow?: string;
+  overflowX?: 'visible' | 'hidden' | 'scroll' | 'auto';
+  overflowY?: 'visible' | 'hidden' | 'scroll' | 'auto';
 }
 
 interface TextStyle {
