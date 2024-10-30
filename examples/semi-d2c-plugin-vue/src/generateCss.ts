@@ -14,17 +14,14 @@ const generateCSS = (
   let cssStr = '';
 
   const classNameSet: Set<string> = new Set();
+  const declBlockToClassName = new Map();
   traverseNodeTree(JSONSchema, (node: TreeNode) => {
     const { style } = node;
     if (!style) {
       return;
     }
 
-    const className = getNodeClassName(node, {
-      classNameSet,
-      caseStyle: 'kebabCase',
-    });
-    node.className = className;
+    let className = '';
     const declBlock = transformStyleToCSSDeclarationBlock(style, {
       sizeUnitConfig,
       modifyCSSDeclaration: (key: string, value: string) => {
@@ -35,7 +32,17 @@ const generateCSS = (
         };
       },
     });
-    cssStr += `.${className} ${declBlock}`;
+    if (!declBlockToClassName.has(declBlock)) {
+      className = getNodeClassName(node, {
+        classNameSet,
+        caseStyle: 'kebabCase',
+      });
+      declBlockToClassName.set(declBlock, className);
+      cssStr += `.${className} ${declBlock}`;
+    } else {
+      className = declBlockToClassName.get(declBlock);
+    }
+    node.className = className;
   });
 
   return cssStr;
