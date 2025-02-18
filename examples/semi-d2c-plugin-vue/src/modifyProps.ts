@@ -1,6 +1,14 @@
 import { PluginHooks, TreeNode } from '@douyinfe/semi-d2c-typings';
 import { omit } from 'lodash';
 
+function transformJsonString(jsonStr: string): string {
+  // 第一步：对单引号添加转义符
+  let escapedSingleQuotes = jsonStr.replace(/'/g, "\\'");
+  // 第二步：将双引号替换为单引号
+  let result = escapedSingleQuotes.replace(/"/g, "'");
+  return result;
+}
+
 const slotToTemplate = (
   node: TreeNode,
   options: Parameters<TreeNode['toTemplate']>[1],
@@ -49,7 +57,7 @@ const modifyProps: PluginHooks['modifyProps'] = (args) => {
             props[':class'] = value;
           }
         } else {
-          props[`:${key}`] = value;
+          props[`:${key}`] = typeof value === 'object' ? transformJsonString(JSON.stringify(value)) : `${value}`;
           delete props[key];
         }
         break;
