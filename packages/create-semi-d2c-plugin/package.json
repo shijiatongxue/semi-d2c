@@ -1,6 +1,6 @@
 {
   "name": "@douyinfe/create-semi-d2c-plugin",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Create Semi D2C plugin project",
   "main": "src/index.js",
   "bin": {

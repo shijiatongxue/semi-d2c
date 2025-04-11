@@ -1,5 +1,11 @@
 # @douyinfe/create-semi-d2c-plugin
 
+## 0.0.6
+
+### Patch Changes
+
+- chore: update typings version
+
 ## 0.0.5
 
 ### Patch Changes
