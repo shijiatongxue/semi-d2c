@@ -23,7 +23,7 @@ const slotToTemplate = (
 };
 
 function isNode(value: any): boolean {
-  return typeof value === 'object' && 'tag' in value;
+  return typeof value === 'object' && value !== null && 'tag' in value;
 }
 
 const modifyProps: PluginHooks['modifyProps'] = (args) => {
@@ -57,7 +57,10 @@ const modifyProps: PluginHooks['modifyProps'] = (args) => {
             props[':class'] = value;
           }
         } else {
-          props[`:${key}`] = typeof value === 'object' ? transformJsonString(JSON.stringify(value)) : `${value}`;
+          props[`:${key}`] =
+            typeof value === 'object'
+              ? transformJsonString(JSON.stringify(value))
+              : `${value}`;
           delete props[key];
         }
         break;
